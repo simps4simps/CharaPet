@@ -3,3 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  /* Colors */
+  --white: #e4f5ff;
+  --skye-blue: #96c7d5;
+  --light-blue: #2d7a9c;
+  --aqua: #094f6e;
+  --dark-blue: #022534;
+
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
