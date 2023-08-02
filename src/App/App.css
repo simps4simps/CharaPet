@@ -1,0 +1,13 @@
+.app {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+#nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 1rem;
+  font-weight: 450;
+}
