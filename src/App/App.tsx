@@ -2,6 +2,9 @@ import React from "react";
 import "./App.css";
 
 import NavBar from "../Components/NavBar/NavBar";
+import Home from "../Components/Home/Home";
+import About from "../Components/About/About";
+import Contact from "../Components/Contact/Contact";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -14,9 +17,9 @@ const App = () => {
 
       <div className="view">
         <Routes>
-          <Route path="/" />
-          <Route path="/Contact" />
-          <Route path="/About" />
+          <Route path="/" element={<Home />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/About" element={<About />} />
         </Routes>
       </div>
     </div>
