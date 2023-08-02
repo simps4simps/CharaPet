@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Modern";
+  src: url("/Font/MuseoModerno.ttf");
+}
+
 :root {
   /* Colors */
   --white: #e4f5ff;
@@ -14,4 +19,6 @@
 
   background-color: var(--dark-blue);
   color: var(--white);
+
+  font-family: "Modern";
 }
