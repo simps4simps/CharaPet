@@ -1,6 +1,12 @@
 .app {
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+}
+
+.view {
+  height: 80%;
+  width: 100%;
+  margin-top: 2rem;
 }
 
 #nav-bar {
