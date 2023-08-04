@@ -14,6 +14,10 @@ const NavBar = () => {
         <Link to={"/Contact"}>Contact</Link>
       </div>
 
+      <div className="links">
+        <Link to={"/"}>Home</Link>
+      </div>
+
       <Outlet />
     </>
   );
