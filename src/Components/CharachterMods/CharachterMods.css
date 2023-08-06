@@ -1,0 +1,19 @@
+#canvas {
+  width: 50% !important;
+  height: 50% !important;
+  max-width: 300px;
+  max-height: 100px;
+  margin: 1rem !important;
+}
+
+.charachter-mods {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrows-icon {
+  cursor: pointer;
+}
