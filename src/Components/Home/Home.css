@@ -17,3 +17,11 @@
   transform: translate(-50%, -50%);
   box-shadow: 0 0 100px 100px rgba(150, 199, 213, 0.129);
 }
+
+#charachter-mods-wrapper {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

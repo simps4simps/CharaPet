@@ -1,6 +1,8 @@
 import React from "react";
 import "./Home.css";
 
+import CharachterMods from "../CharachterMods/CharachterMods";
+
 const Home = () => {
   return (
     <>
@@ -8,7 +10,11 @@ const Home = () => {
         <div id="circle"></div>
       </div>
 
-      <div id="charachter-mods"></div>
+      <div id="charachter-mods-wrapper">
+        <CharachterMods />
+        <CharachterMods />
+        <CharachterMods />
+      </div>
     </>
   );
 };
