@@ -1,5 +1,5 @@
-const RadiantToAngels = (angle: number) => {
-  return (180 / Math.PI) * angle;
+const AnglesToRadians = (angle: number) => {
+  return (Math.PI / 180) * angle;
 };
 
-export default RadiantToAngels;
+export default AnglesToRadians;
