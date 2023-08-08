@@ -8,17 +8,17 @@ import AnglesToRadians from "../../Utils/AngelsToRadians";
 
 import { Model3D } from "../../Utils/Interfaces/Interfaces";
 
-const CharachterMods: React.FC<Model3D> = ({ Model }) => {
+const CharachterMods: React.FC<Model3D> = ({ Model, texture }) => {
   return (
-    <div className="charachter-mods">
+    <div className="charachter-mods" data-texture={`${texture}`}>
       <Canvas shadows id="canvas">
         <PerspectiveCamera
           makeDefault
-          position={[0, 10, 18]}
-          rotation={[AnglesToRadians(-40), 0, 0]}
+          position={[0, 5, 10]}
+          rotation={[AnglesToRadians(-30), 0, 0]}
         />
 
-        <Model />
+        <Model texture={texture} Model={Model} />
 
         <ambientLight />
         <directionalLight />
