@@ -12,16 +12,14 @@ import "swiper/css/pagination";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
-interface Model3D {
-  Model: React.FunctionComponent;
-}
+import { CharachterMod } from "../../Utils/Interfaces/Interfaces";
 
-interface CharachterMod {
-  Model: React.FunctionComponent;
-  Wrapper: React.FC<Model3D>;
-}
-
-const CharachterModSlider: React.FC<CharachterMod> = ({ Model, Wrapper }) => {
+const CharachterModSlider: React.FC<CharachterMod> = ({
+  Model,
+  Wrapper,
+  setActive,
+  role,
+}) => {
   const back = useRef<any>(null);
   const next = useRef<any>(null);
   const swiper = useRef<SwiperRef>(null);
@@ -48,6 +46,12 @@ const CharachterModSlider: React.FC<CharachterMod> = ({ Model, Wrapper }) => {
         slidesPerView={1}
         loop
         ref={swiper}
+        onActiveIndexChange={(swiper) => {
+          setActive({
+            model: swiper.slides[swiper.activeIndex].children[0],
+            role,
+          });
+        }}
       >
         <SwiperSlide className="slides">
           <Wrapper Model={Model} />

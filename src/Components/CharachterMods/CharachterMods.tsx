@@ -6,9 +6,7 @@ import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 
 import AnglesToRadians from "../../Utils/AngelsToRadians";
 
-interface Model3D {
-  Model: React.FunctionComponent;
-}
+import { Model3D } from "../../Utils/Interfaces/Interfaces";
 
 const CharachterMods: React.FC<Model3D> = ({ Model }) => {
   return (
