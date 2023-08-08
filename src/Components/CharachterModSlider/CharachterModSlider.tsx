@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import "./CharachterModSlider.css";
 
 import { Navigation, Pagination } from "swiper/modules";
@@ -19,6 +19,7 @@ const CharachterModSlider: React.FC<CharachterMod> = ({
   Wrapper,
   setActive,
   role,
+  texture,
 }) => {
   const back = useRef<any>(null);
   const next = useRef<any>(null);
@@ -46,20 +47,32 @@ const CharachterModSlider: React.FC<CharachterMod> = ({
         slidesPerView={1}
         loop
         ref={swiper}
+        onInit={(swiper) => {
+          setActive({
+            model: swiper.slides[swiper.activeIndex].children[0],
+            role: role,
+            texture:
+              swiper.slides[swiper.activeIndex].children[0].getAttribute(
+                "data-texture"
+              ),
+          });
+        }}
         onActiveIndexChange={(swiper) => {
           setActive({
             model: swiper.slides[swiper.activeIndex].children[0],
-            role,
+            role: role,
+            texture:
+              swiper.slides[swiper.activeIndex].children[0].getAttribute(
+                "data-texture"
+              ),
           });
         }}
       >
-        <SwiperSlide className="slides">
-          <Wrapper Model={Model} />
-        </SwiperSlide>
-
-        <SwiperSlide className="slides">
-          <Wrapper Model={Model} />
-        </SwiperSlide>
+        {texture.map((e) => (
+          <SwiperSlide className="slides">
+            <Wrapper Model={Model} texture={e} />
+          </SwiperSlide>
+        ))}
       </Swiper>
 
       <span onClick={handleNext}>
