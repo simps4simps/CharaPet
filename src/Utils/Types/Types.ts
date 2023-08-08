@@ -1,7 +1,11 @@
+import * as THREE from "three";
+import React from "react";
+
 export type activeModel = {
   role: string;
   model: Element;
-} | null;
+  texture: string | null;
+};
 
 export type CameraHelperProps = {
   position: number[];
@@ -10,4 +14,14 @@ export type CameraHelperProps = {
     y: number;
     z: number;
   };
+};
+
+export type Texture = {
+  texture: string;
+};
+
+export type TextureArray = {
+  head: string[];
+  body: string[];
+  feet: string[];
 };
