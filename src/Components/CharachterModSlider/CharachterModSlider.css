@@ -1,0 +1,25 @@
+.swiper {
+  width: 300px;
+  height: auto;
+}
+
+.slides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination {
+  z-index: 2 !important;
+}
+
+.arrows-icon {
+  cursor: pointer !important;
+  z-index: 10;
+}
+
+.charachter-mod-slider-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
