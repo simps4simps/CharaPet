@@ -3,8 +3,6 @@ import "./CharachterMods.css";
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 import AnglesToRadians from "../../Utils/AngelsToRadians";
 
@@ -15,7 +13,6 @@ interface Model3D {
 const CharachterMods: React.FC<Model3D> = ({ Model }) => {
   return (
     <div className="charachter-mods">
-      <ArrowBackIosIcon className="arrows-icon" />
       <Canvas shadows id="canvas">
         <PerspectiveCamera
           makeDefault
@@ -29,7 +26,6 @@ const CharachterMods: React.FC<Model3D> = ({ Model }) => {
         <directionalLight />
         {/* <OrbitControls /> */}
       </Canvas>
-      <ArrowForwardIosIcon className="arrows-icon" />
     </div>
   );
 };
