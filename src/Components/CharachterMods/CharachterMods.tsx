@@ -8,7 +8,11 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 import AnglesToRadians from "../../Utils/AngelsToRadians";
 
-const CharachterMods = () => {
+interface Model3D {
+  Model: React.FunctionComponent;
+}
+
+const CharachterMods: React.FC<Model3D> = ({ Model }) => {
   return (
     <div className="charachter-mods">
       <ArrowBackIosIcon className="arrows-icon" />
@@ -19,10 +23,7 @@ const CharachterMods = () => {
           rotation={[AnglesToRadians(-40), 0, 0]}
         />
 
-        <mesh receiveShadow>
-          <boxGeometry args={[5, 5, 5]} />
-          <meshStandardMaterial />
-        </mesh>
+        <Model />
 
         <ambientLight />
         <directionalLight />
