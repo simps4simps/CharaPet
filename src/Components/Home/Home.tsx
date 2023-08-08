@@ -3,6 +3,7 @@ import "./Home.css";
 
 import CharachterMods from "../CharachterMods/CharachterMods";
 import { Model } from "../MinecraftHead/Minecraft_head";
+import { McMan } from "../McMan/McMan";
 
 import CharachterModSlider from "../CharachterModSlider/CharachterModSlider";
 import { activeModel } from "../../Utils/Types/Types";
@@ -16,6 +17,9 @@ const Home = () => {
     <>
       <div id="charachter-preview">
         <div id="circle"></div>
+        <div className="mc-man">
+          <McMan />
+        </div>
       </div>
 
       <div id="charachter-mods-wrapper">
