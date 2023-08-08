@@ -4,6 +4,8 @@ import "./Home.css";
 import CharachterMods from "../CharachterMods/CharachterMods";
 import { Model } from "../MinecraftHead/Minecraft_head";
 
+import CharachterModSlider from "../CharachterModSlider/CharachterModSlider";
+
 const Home = () => {
   return (
     <>
@@ -12,9 +14,9 @@ const Home = () => {
       </div>
 
       <div id="charachter-mods-wrapper">
-        <CharachterMods Model={Model} />
-        <CharachterMods Model={Model} />
-        <CharachterMods Model={Model} />
+        <CharachterModSlider Model={Model} Wrapper={CharachterMods} />
+        <CharachterModSlider Model={Model} Wrapper={CharachterMods} />
+        <CharachterModSlider Model={Model} Wrapper={CharachterMods} />
       </div>
     </>
   );
