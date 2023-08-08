@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 
 import CharachterMods from "../CharachterMods/CharachterMods";
+import { Model } from "../MinecraftHead/Minecraft_head";
 
 const Home = () => {
   return (
@@ -11,9 +12,9 @@ const Home = () => {
       </div>
 
       <div id="charachter-mods-wrapper">
-        <CharachterMods />
-        <CharachterMods />
-        <CharachterMods />
+        <CharachterMods Model={Model} />
+        <CharachterMods Model={Model} />
+        <CharachterMods Model={Model} />
       </div>
     </>
   );
