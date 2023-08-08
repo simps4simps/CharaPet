@@ -20,8 +20,11 @@
 
 #charachter-mods-wrapper {
   display: flex;
-  width: 50%;
+  position: relative;
+  width: 40%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--aqua);
+  border-radius: 10%;
 }

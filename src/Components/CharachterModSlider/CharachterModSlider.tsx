@@ -44,8 +44,9 @@ const CharachterModSlider: React.FC<CharachterMod> = ({ Model, Wrapper }) => {
         centeredSlides
         modules={[Navigation, Pagination]}
         className="swiper"
-        spaceBetween={1}
+        spaceBetween={0}
         slidesPerView={1}
+        loop
         ref={swiper}
       >
         <SwiperSlide className="slides">

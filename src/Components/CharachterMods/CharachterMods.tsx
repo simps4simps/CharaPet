@@ -16,7 +16,7 @@ const CharachterMods: React.FC<Model3D> = ({ Model }) => {
       <Canvas shadows id="canvas">
         <PerspectiveCamera
           makeDefault
-          position={[0, 10, 10]}
+          position={[0, 10, 18]}
           rotation={[AnglesToRadians(-40), 0, 0]}
         />
 
