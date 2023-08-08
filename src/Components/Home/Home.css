@@ -28,3 +28,11 @@
   background-color: var(--aqua);
   border-radius: 10%;
 }
+
+.mc-man {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
